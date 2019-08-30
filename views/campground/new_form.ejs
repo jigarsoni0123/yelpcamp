@@ -1,0 +1,23 @@
+<%include ../partials/header%>
+
+<h1 style="text-align:center;">Fill the details to Add a new camp</h1>
+	
+	<div class="container">
+		<div style="width:30%; margin:25px auto">
+			<form action="/camps" method="POST">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Camp Name" name="names">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Image Link" name="images">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Description" name="description">
+				</div>
+				<button class="btn btn-large btn-primary btn-block">Submit</button>
+			</form>
+			<a href="/">Go Back</a>
+		</div>
+	</div>
+
+<%include ../partials/footer%>

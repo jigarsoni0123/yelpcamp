@@ -1,0 +1,17 @@
+.comm{
+	margin-bottom:5px;
+	line-height:1.1em;
+	font-size:0.9em;
+}
+
+.reviews{
+	font-size:25px;
+	margin-bottom:0px;
+}
+
+.details{
+	margin-top:20px;
+	margin-bottom:0px;
+	text-align:left;
+	font-size:0.8em;
+}
