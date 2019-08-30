@@ -55,6 +55,4 @@ app.use("/",indexRoutes);
 
 
 
-app.listen("3001",function(){
-	console.log("YelpCamp App has started on 3001 Port");
-});
+app.listen(process.env.PORT,process.env.IP);
