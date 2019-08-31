@@ -22,8 +22,7 @@ var commentRoutes=require("./routes/comment"),
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 
-mongoose.connect("mongodb://jigar:jigarsoni@yelpcamp-shard-00-00-vpwtg.mongodb.net:27017,yelpcamp-shard-00-01-vpwtg.mongodb.net:27017,yelpcamp-shard-00-02-vpwtg.mongodb.net:27017/test?ssl=true&replicaSet=yelpcamp-shard-0&authSource=admin&retryWrites=true&w=majority").
-	catch(error => console.log(error));
+mongoose.connect(process.env.DATABASEURL);
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs");
