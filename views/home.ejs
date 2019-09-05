@@ -1,7 +1,69 @@
-<% include partials/header %>
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<title>YelpCamp</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" type="text/css" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/yelpcamp.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900&display=swap" rel="stylesheet">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</HEAD>
+<BODY class="home">
+	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d3d3d3;">
+	  
+	  <div class="container-fluid">
+	  	  <a class="navbar-brand" href="/"><i class="fa fa-free-code-camp"></i> YelpCamp</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggle" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
 
-<h1>Welcome to Yelpcamp homepage</h1>
+		  <div class="collapse navbar-collapse" id="toggle">
+		  	<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
 
-<a href="camps">View All Camps</a><br>
+		  		<% if(!currentUser){ %>
+		  		<li class="nav-item active">
+	        		<a class="nav-link" href="/login">Login</a>
+	      		</li>
+	       		<li class="nav-item active">
+	        		<a class="nav-link" href="/register">Register</a>
+	      		</li>
+	      		<% }else{ %>
+	      		<li class="nav-item active">
+	      			<a class="nav-link" href="#"><%=currentUser.username%></a>
+	      		</li>
+		  		<li class="nav-item active">
+	        		<a class="nav-link" href="/logout">Logout</a>
+	      		</li>
+	      		<% } %>
+		  	</ul>
+		  </div>
+	  </div>
+	</nav>
+
+	<% if(error && error.length>0){ %>
+		<div class="container" style="margin-top: 20px;">
+			<div class="alert alert-danger">
+				<%= error %>
+			</div>
+		</div>
+	<% } %>
+
+	<% if(success && success.length>0){ %>
+		<div class="container" style="margin-top: 20px;">
+			<div class="alert alert-success">
+				<%= success %>
+			</div>
+		</div>
+	<% } %>
+
+<div class="row">
+	<div class="col">
+		<div id=centered>
+		<h1 id="h1_home">Welcome to Yelpcamp</h1>
+		<h3 id="h3_home">The Best place for viewing Campgrounds across Gujarat</h3>
+		<hr>
+		<a href="camps" class="btn btn-light btn-lg">View All Camps</a><br>
+		</div>	
+	</div>
+</div>
 
 <% include partials/footer %>

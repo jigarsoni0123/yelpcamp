@@ -15,3 +15,43 @@
 	text-align:left;
 	font-size:0.8em;
 }
+
+#centered{
+	text-align:center;
+	padding-top:15%;	
+	font-family: 'Source Sans Pro', sans-serif;
+}
+.foot{
+	position:absolute;
+	bottom:0;
+}
+hr{
+	width:40%;
+	border-top:1px solid #ffffff;
+	border-bottom:1px solid rgba(0,0,0,0.2);
+	padding-bottom:20px;
+}
+
+body{
+background: #ff6e7f;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #bfe9ff, #ff6e7f);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #bfe9ff, #ff6e7f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.home{
+	overflow:hidden;
+	background-image:url("https://images.unsplash.com/photo-1555985202-12975b0235dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80");
+	background-repeat:no;
+	background-position:top;
+	background-size:cover;
+}
+#h1_home{
+	font-weight:normal;
+	font-size:60px;
+	color:#F5F5F5;
+}
+#h3_home{
+	font-weight:normal;
+	color:#F5F5F5;
+}
